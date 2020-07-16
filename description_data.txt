@@ -1,0 +1,35 @@
+###############################################################
+## DESCRIPTION OF DATA STRUCTURES
+
+data_XXX
+	img_name: image identifier
+	camera: camera that took the image (see below for exhaustive list)
+	phase: phase angle (rad)
+	min_res: ground resolution at subspacecraft point (km)
+	moon_att: corrected attitude of target
+	moon_pos: moon position in the reference frame in m (in case of Voayger images, already corrected for distance)
+	kdist: distance correction coefficient applied on available position at the time
+	Sun_pos: position of the Sun in referece frame in m
+	Rcam: camera orientation in the reference frame
+	time: time the image was acquired (ephemeris time (et))
+	int_et: integration time for the observation
+	RSF: RADIANCE SCALE FACTOR (Voyager only), scaling factor to convert DN in physical units of reflectance
+	coef2lorri: coefficient used to scale voyager observations to the radiometric level of the LORRI
+	corr_radio: radiometric correction (Belgacem et al. Icarus, 2019)
+	
+XXX refers to the moon (ie EUR for Europa, GAN for Ganymede and CAL for Callisto)
+All positions and orientations are given in the ECLIP2000 frame centered on the spacecraft
+
+######################################
+List of cameras
+	NH_LORRI: New Horizons LOng Range Reconnaissance Imager
+	VG1_NAC: Voyager 1's Narrow Angle Camera
+	VG1_WAC: Voyager 1's Wide Angle Camera
+	VG2_NAC: Voyager 2's Narrow Angle Camera
+	VG2_WAC: Voyager 2's Wide Angle Camera
+	
+##################################
+##################################
+author: I. Belgacem
+creation date: 29/05/2020
+Project: JUICE, Photometry PhD (Airbus DS / GEOPS)
